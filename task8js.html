@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-image: url(pb.jpg);">
+<style>
+  span{
+    color: red;
+    font-weight: bold;
+    text-align: left;
+  }
+  .title{
+    color: black;
+    font-weight: bold;
+    text-align: right;
+  }
+ 
+
+</style>
+
+<center>
+<form>
+  <p style="font-size: 40px; font-weight: bold; color: blue;">Registration Form </p>
+<table style="padding: 10px; margin-top: 10px;">
+  
+<tr>
+  <td>
+    <label class="title">First Name</label>
+  </td>
+  <td>
+    <input type="text" id="input1" onkeyup="check1()" style="width: 300px;">
+  </td>
+  <td>
+    <span id="info1" ></span>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <label class="title">Last Name</label>
+  </td>
+  <td>
+    <input type="text" id="input2" onkeyup="check2()" style="width: 300px;">
+  </td>
+  <td>
+    <span id="info2"></span>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <label class="title">Email</label>
+  </td>
+  <td>
+    <input type="text" id="input3" onkeyup="check3()" style="width: 300px;">
+  </td>
+  <td>
+    <span id="info3"></span>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <label class="title">Password</label>
+  </td>
+  <td>
+    <input type="text" id="input4" onkeyup="check4()" style="width: 300px;">
+  </td>
+  <td>
+    <span id="info4"></span>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <label class="title">Re-enter Password</label>
+  </td>
+  <td>
+    <input type="text" id="input5" onkeyup="check5()" style="width: 300px;" >
+  </td>
+  <td>
+    <span id="info5"></span>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <label class="title">Gender</label>
+  </td>
+  <td>
+    <input type="radio" id="male" name="gender" value="HTML">
+  <label for="html">Male</label> <br>
+  <input type="radio" id="female" name="gender" value="CSS">
+  <label for="css">Female</label>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <label class="title">Age</label>
+  </td>
+  <td>
+    <input type="text" id="input6" onkeyup="check6()" style="width: 300px;">
+  </td>
+  <td>
+    <span id="info6"></span>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <label class="title">Phone Number</label>
+  </td>
+  <td>
+    <input type="text" id="input7" onkeyup="check7()" style="width: 300px;">
+  </td>
+  <td>
+    <span id="info7"></span>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <label class="title">Address</label>
+  </td>
+  <td>
+    <input type="text" id="input8" onkeyup="check8()" style="width: 300px; height: 60px;">
+  </td>
+  <td>
+    <span id="info8"></span>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <label class="title">State</label>
+  </td>
+  <td>
+    <input type="text" id="input9" onkeyup="check9()" style="width: 300px;">
+  </td>
+  <td>
+    <span id="info9"></span>
+  </td>
+</tr>
+
+<tr>
+  <td><label class="title">Country</label></td>
+  <td>
+    <select>
+      <option>Choose your country</option>
+      <option>India</option>
+      <option>Option2</option>
+    </select>
+  </td>
+</tr>
+
+<tr>
+  <td><label class="title">Languages Known</label></td>
+  <td>
+    <input type="checkbox" value="English">
+    <label for="vehicle1"> English</label>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+    <label for="vehicle2"> Kannada</label>
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+    <label for="vehicle3">Hindi</label>
+    <input type="checkbox" id="lan4" name="vehicle4" value="Boat">
+    <label for="vehicle3">Telugu</label>
+  </td>
+</tr>
+
+<tr>
+  <td colspan="2"><input type="checkbox" name="info" value="true">Hereby I declare all the given details are true</td>
+</tr>
+
+<tr>
+  <td colspan="2" class="login">
+    <p style="text-align: right;">Login to <a href="www.ethnus.com">Ethnus</a> website
+    </p>
+  </td>
+</tr>
+
+</table>
+</form>
+<button class="button" style="height: 30px; width: 100px; border-radius: 30px; color: white; background-color: red; font-weight: bold;">Register</button>
+</center>
+
+<script>
+
+var input1= document.getElementById('info1');
+var input2= document.getElementById('info2');
+var input3= document.getElementById('info3');
+var input4= document.getElementById('info4');
+var input5= document.getElementById('info5');
+var input6= document.getElementById('info6');
+var input7= document.getElementById('info7');
+var input8= document.getElementById('info8');
+var input9= document.getElementById('info9');
+
+  function check1(){
+    var get_input=document.getElementById('input1').value;
+    if(get_input.length<=5){
+      input1.innerText=`Poor`
+        return false
+    }
+    else{
+      input1.innerText=``
+    }
+  }
+  function check2(){
+    var input2= document.getElementById('info2');
+    var get_input=document.getElementById('input2').value;
+    if(get_input.length<=5){
+      input2.innerText=`Poor`
+        return false
+    }
+    else{
+      input2.innerText=``
+    }
+  }
+  function check3(){
+    var input3= document.getElementById('info3');
+    var get_input=document.getElementById('input3').value;
+    if(get_input.length<=5){
+      input3.innerText=`Poor`
+        return false
+    }
+    else{
+      input3.innerText=``
+    }
+  }
+  function check4(){
+    var input4= document.getElementById('info4');
+    var get_input=document.getElementById('input4').value;
+    if(get_input.length<=5){
+      input4.innerText=`Poor`
+        return false
+    }
+    else{
+      input4.innerText=``
+    }
+  }
+  function check5(){
+    var input5= document.getElementById('info5');
+    var get_input1=document.getElementById('input4').value;
+    var get_input=document.getElementById('input5').value;
+    if(get_input.length<=5){
+      input5.innerText=`Poor or Mismatch`
+        return false
+    }
+    else if(get_input1!=get_input){
+      input5.innerText=`Poor or Mismatch`
+        return false
+    }
+    else{
+      input5.innerText=``
+    }
+  }
+  function check6(){
+    var input6= document.getElementById('info6');
+    var get_input=document.getElementById('input6').value;
+    if(get_input.length<=5){
+      input6.innerText=`Poor`
+        return false
+    }
+    else{
+      input6.innerText=`<p><p>`
+    }
+  }
+
+  function check7(){
+    var input2= document.getElementById('info7');
+    var get_input=document.getElementById('input7').value;
+    if(get_input.length<=5){
+      input7.innerText=`Poor`
+        return false
+    }
+    else{
+      input7.innerText=``
+    }
+  }
+
+  function check8(){
+    var input8= document.getElementById('info8');
+    var get_input=document.getElementById('input8').value;
+    if(get_input.length<=5){
+      input8.innerText=`Poor`
+        return false
+    }
+    else{
+      input8.innerText=`<p><p>`
+    }
+  }
+
+  function check9(){
+    var input9= document.getElementById('info9');
+    var get_input=document.getElementById('input9').value;
+    if(get_input.length<=5){
+      input9.innerText=`Poor`
+        return false
+    }
+    else{
+      input9.innerText=``
+    }
+  }
+  
+</script>
+
+</body>
+</html>

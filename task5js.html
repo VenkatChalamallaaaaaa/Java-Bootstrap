@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task5</title>
+</head>
+<body>
+<center>
+  
+
+<style>
+  .name1{
+    border-color: red;
+  }
+  .name2{
+    border-color: black;
+  }
+
+</style>
+  
+  <table >
+    <tr>
+      <td><label>Name:</label></td>
+      <td><input class="" type="text" id="input1" onkeyup="check_name()"><br></td>
+      <td><p id="name"></p></td>
+    </tr>
+    <tr>
+      <td><label>Email:</label></td>
+      <td><input class="" type="text" id="input2" onkeyup="check_email()"><br></td>
+      <td><p id="email"></p></td>
+    </tr>
+    <tr>
+      <td><label>Website:</label></td>
+      <td><input class="" type="text" id="input3" onkeyup="check_website()"><br></td>
+      <td><p id="website"></p></td>
+    </tr>
+    <tr>
+      <td><label>Message:</label></td>
+      <td><input class="" type="text"  id="input4"  style="height: 100px;" onkeyup="check_message()"><br></td>
+      <td><p id="message"></p></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Submit</button>
+      </td>
+    </tr>
+  </table>
+
+</center>
+
+<script>
+  var name_get=document.getElementById('name');
+  var email_get=document.getElementById('email');
+  var website_get=document.getElementById('website');
+  var message_get=document.getElementById('message');
+
+  var name_input1=document.getElementById('input1');
+  var email_input1=document.getElementById('input2');
+  var website_input1=document.getElementById('input3');
+  var message_input1=document.getElementById('input4');
+
+  
+  function check_name(){
+    var name_input=document.getElementById('input1').value;
+    
+    if(name_input.length==0){
+      name_get.innerHTML=`<p style="color:red";>This field is required<p>`
+      name_input1.className="name1"
+      return false
+    }
+    else{
+      name_get.innerHTML=`<p><p>`
+      name_input1.className="name2"
+
+    }
+  }
+  function check_email(){
+    var email_input=document.getElementById('input2').value;
+    
+    if(email_input.length==0){
+      email_get.innerHTML=`<p style="color:red";>This field is required<p>`
+      email_input1.className="name1"
+      return false
+    }
+    else{
+      email_get.innerHTML=`<p><p>`
+      email_input1.className="name2"
+
+    }
+  }
+  function check_website(){
+    var website_input=document.getElementById('input3').value;
+    
+    if(website_input.length==0){
+      website_get.innerHTML=`<p style="color:red";>This field is required<p>`
+      website_input1.className="name1"
+      return false
+    }
+    else{
+      website_get.innerHTML=`<p><p>`
+      website_input1.className="name2"
+
+    }
+  }
+  function check_message(){
+    var message_input=document.getElementById('input4').value;
+    
+    if(message_input.length==0){
+      message_get.innerHTML=`<p style="color:red";>This field is required<p>`
+      message_input1.className="name1"
+      return false
+    }
+    else{
+      message_get.innerHTML=`<p><p>`
+      message_input1.className="name2"
+
+    }
+  }
+
+
+</script>
+  
+</body>
+</html>

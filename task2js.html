@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <h2> Enter A String :</h2>
+ <input type="text" id="input" >
+ <button onclick="order()"> Submit </button>
+ <h2> Output:</h2>
+ <p class="output" id="output"> </p>
+  <script>
+function alpha(str) {
+var arr = str.split(""); 
+res = arr.sort().join(""); 
+return res; }
+
+function order(){
+  var new_string;
+  var input= document.getElementById('input').value;
+  input=input.toLowerCase()
+  console.log(input)
+  if (input == ""){
+    return;
+  }
+  else{
+    var new_string=alpha(input);
+    console.log(new_string);
+    
+  }
+  output.innerHTML=`${new_string}`;
+
+}
+  </script>
+  
+</body>
+</html>

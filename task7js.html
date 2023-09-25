@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+#myAnimation {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  
+
+}
+
+</style>
+<body>
+
+<p>
+<button onclick="myMove()">Click Me</button> 
+<button onclick="myStop()">Stop</button>
+</p>
+
+<div id ="myContainer">
+<div id ="myAnimation" class="image"> <img style="height: 200px; width: 200px;" src="train.jpg" alt="train"></div>
+</div>
+
+<script>
+var id = null;
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  
+  id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 1000) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+
+function myStop() {
+  var elem = document.getElementById("myAnimation");   
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 1000) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.left = pos + '0'; 
+    }
+  }
+}
+
+</script>
+
+</body>
+</html>

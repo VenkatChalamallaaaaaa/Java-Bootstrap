@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <h2> Enter a number :</h2>
+ <input type="number" id="number" >
+ <button onclick="reverse()"> Submit </button>
+ <h2> Output:</h2>
+ <p class="output" id="output"> </p>
+
+  <script>
+function flipInt(n){
+var digit, result = 0
+
+while( n ){
+digit = n % 10 
+result = (result * 10) + digit 
+n = n/10|0  
+}
+
+return result;
+}
+
+
+//var output = document.getElementById('output');
+function reverse(){
+  var reverse_num;
+  var input= document.getElementById('number').value;
+  if (input == 0){
+    console.log('hi')
+    return 0;
+  }
+  else{
+    var reverse_num1=flipInt(input);
+    console.log(reverse_num1);
+    
+  }
+  output.innerHTML=`Value:${reverse_num1}`;
+
+}
+  </script>
+  
+</body>
+</html>
